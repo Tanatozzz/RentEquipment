@@ -1,0 +1,44 @@
+﻿<Window x:Class="WpfApp1.Windows.EquipmentAdd"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1.Windows"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="EquipmentAdd" Height="550" Width="650" MinHeight="550" MinWidth="650">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock x:Name="txtAddEditEmployee" Text="Добавление оборудования" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="30" FontFamily="Franklin Gothic Demi" Margin="0 10 0 0"/>
+        <TextBlock Text="Название оборудования" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="25" Grid.Row="1"/>
+        <TextBlock Text="Тип Оборудования" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="25" Grid.Row="2"/>
+        <TextBlock Text="Цена" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="25" Grid.Row="3"/>
+        <TextBlock Text="Срок гарантии" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="25" Grid.Row="4"/>
+        <TextBlock Text="Статус оборудования" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="25" Grid.Row="5"/>
+        <!--Поля для заполнения-->
+        <TextBox x:Name="txtEqName" Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Width="250" FontSize="16" Margin="8" MaxLength="100" VerticalContentAlignment="Center"/>
+        <ComboBox x:Name="cmbType" Grid.Column="1" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" Width="250" FontSize="16" Margin="8" VerticalContentAlignment="Center"/>
+        <TextBox x:Name="txtPrice"  Grid.Column="1" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center" Width="250" FontSize="16" Margin="8" MaxLength="100" VerticalContentAlignment="Center"/>
+        <DatePicker x:Name="dpDate" Grid.Column="1" Grid.Row="4" VerticalAlignment="Center" HorizontalAlignment="Center" Width="250" FontSize="16" Margin="8" VerticalContentAlignment="Center"/>
+        <ComboBox x:Name="cmbStatus" Grid.Column="1" Grid.Row="5" VerticalAlignment="Center" HorizontalAlignment="Center" Width="250" FontSize="16" Margin="8"/>
+        <Button x:Name="btnAddEquipment" Grid.Row="10" Grid.ColumnSpan="2" Height="30" Width="200" Content="Добавить оборудование" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="16" Margin="0 0 0 0" Click="btnAddEquipment_Click"/>
+    </Grid>
+</Window>

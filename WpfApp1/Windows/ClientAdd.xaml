@@ -1,0 +1,77 @@
+﻿<Window x:Class="WpfApp1.Windows.ClientAdd"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1.Windows"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="ClientAdd" Height="650" Width="650" MinHeight="550" MinWidth="650">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock x:Name="txtAddEditEmployee" Text="Добавление клиента" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="30" FontFamily="Franklin Gothic Demi" Margin="0 10 0 0"/>
+        <TextBlock Text="Имя" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="25" Grid.Row="1"/>
+        <TextBlock Text="Фамилия" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="25" Grid.Row="2"/>
+        <TextBlock Text="Отчество" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="25" Grid.Row="3"/>
+        <TextBlock Text="Почта" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="25" Grid.Row="4"/>
+        <TextBlock Text="Телефон" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="25" Grid.Row="5"/>
+        <TextBlock Text="Пол" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="25" Grid.Row="6"/>
+        <TextBlock Text="Паспорт " VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="25" Grid.Row="7"/>
+        <TextBlock Text="Дата рождения" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="25" Grid.Row="8"/>
+        <TextBlock Text="Фото" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="25" Grid.Row="10" Grid.RowSpan="2"/>
+        <!--Поля для заполнения-->
+        <TextBox x:Name="txtFName" Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Width="250" FontSize="16" Margin="8" MaxLength="100" VerticalContentAlignment="Center"/>
+        <TextBox x:Name="txtLName" Grid.Column="1" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" Width="250" FontSize="16" Margin="8" MaxLength="100" VerticalContentAlignment="Center"/>
+        <TextBox x:Name="txtMName" Grid.Column="1" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center" Width="250" FontSize="16" Margin="8" MaxLength="100" VerticalContentAlignment="Center"/>
+        <TextBox x:Name="txtEmail" Grid.Column="1" Grid.Row="4" VerticalAlignment="Center" HorizontalAlignment="Center" Width="250" FontSize="16" Margin="8" MaxLength="100" VerticalContentAlignment="Center"/>
+        <TextBox x:Name="txtPhone" Grid.Column="1" Grid.Row="5" VerticalAlignment="Center" HorizontalAlignment="Center" Width="250" FontSize="16" Margin="8" MaxLength="12" PreviewTextInput="txtPhone_PreviewTextInput" VerticalContentAlignment="Center"/>
+        <ComboBox x:Name="cmbGender" Grid.Column="1" Grid.Row="6" VerticalAlignment="Center" HorizontalAlignment="Center" Width="250" FontSize="16" Margin="8"/>
+        <TextBox x:Name="txtPassport" Grid.Column="1" Grid.Row="7" VerticalAlignment="Center" HorizontalAlignment="Center" Width="250" FontSize="16" Margin="8" MaxLength="50" VerticalContentAlignment="Center"/>
+        <DatePicker x:Name="DateBirthdayPicker" Grid.Column="1" Grid.Row="8" VerticalAlignment="Center" HorizontalAlignment="Center" Width="250" FontSize="16" Margin="8" VerticalContentAlignment="Center"/>
+        <Border
+            Grid.Column="1"
+            Grid.Row="10"
+            Grid.RowSpan="3"
+            Height="75"
+            Width="250"
+            Margin="0 0 0 40"
+            CornerRadius="10"
+            Background="Gray"    
+            >
+            <Image x:Name="PhotoUser" Source="/RES/userDef.jpg" />
+
+        </Border>
+        <Button x:Name="btnPhoto"
+                Grid.Row="10"
+                Grid.RowSpan="3"
+                Grid.Column="1"
+                Height="75"
+                Width="250"
+                Margin="0 0 0 40"
+                Click="btnPhoto_Click"
+                Content=""
+                Background="{x:Null}"
+            ></Button>
+        <Button x:Name="btnAddEmployee" Grid.Row="13" Grid.ColumnSpan="2" Height="30" Width="200" Content="Добавить клиента" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="16" Margin="0 0 0 0" Click="btnAddEmployee_Click"/>
+    </Grid>
+</Window>
